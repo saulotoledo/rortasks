@@ -22,7 +22,14 @@
     <%%= f.password_field :password_confirmation %>
 <% else -%>
     <%%= f.label :<%= attribute.column_name %> %><br>
+
+  <% if attribute.column_name == 'description' -%>
+    <%%= f.text_area(:<%= attribute.column_name %>, cols: 50, rows: 8) %>
+  <% elsif attribute.column_name == 'summary' -%>
+    <%%= f.text_area(:<%= attribute.column_name %>, cols: 50, rows: 5) %>
+  <% else -%>
     <%%= f.<%= attribute.field_type %> :<%= attribute.column_name %> %>
+  <% end -%>
 <% end -%>
   </div>
 <% end -%>
