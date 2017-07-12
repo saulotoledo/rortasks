@@ -2,6 +2,7 @@
 
 <h1>Listing Campaigns</h1>
 
+
 <table>
   <thead>
     <tr>
@@ -40,9 +41,6 @@
         <td><%= campaign.expectedresponse %></td>
         <td><%= campaign.numsent %></td>
         <td><%= campaign.parentcampaign %></td>
-        <td><%= link_to 'Show', campaign %></td>
-        <td><%= link_to 'Edit', edit_campaign_path(campaign) %></td>
-        <td><%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

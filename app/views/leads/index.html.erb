@@ -2,6 +2,7 @@
 
 <h1>Listing Leads</h1>
 
+
 <table>
   <thead>
     <tr>
@@ -52,9 +53,6 @@
         <td><%= lead.source %></td>
         <td><%= lead.industry %></td>
         <td><%= lead.description %></td>
-        <td><%= link_to 'Show', lead %></td>
-        <td><%= link_to 'Edit', edit_lead_path(lead) %></td>
-        <td><%= link_to 'Destroy', lead, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

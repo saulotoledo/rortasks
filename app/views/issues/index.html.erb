@@ -2,6 +2,7 @@
 
 <h1>Listing Issues</h1>
 
+
 <table>
   <thead>
     <tr>
@@ -44,9 +45,6 @@
         <td><%= issue.labels %></td>
         <td><%= issue.epic %></td>
         <td><%= issue.sprint %></td>
-        <td><%= link_to 'Show', issue %></td>
-        <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
-        <td><%= link_to 'Destroy', issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

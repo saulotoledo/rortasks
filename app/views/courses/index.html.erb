@@ -2,51 +2,55 @@
 
 <h1>Listing Courses</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Fullname</th>
-      <th>Shortname</th>
-      <th>Courseidnumber</th>
-      <th>Summary</th>
-      <th>Format</th>
-      <th>Numberofweekstopics</th>
-      <th>Start</th>
-      <th>Hiddensections</th>
-      <th>Newsitemstoshow</th>
-      <th>Showgrades</th>
-      <th>Showactivityreports</th>
-      <th>Maxuploadsize</th>
-      <th>Defaultroles</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<ul class="w3-ul w3-hoverable">
+  <li class="w3-border">
     <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.code %></td>
-        <td><%= course.fullname %></td>
-        <td><%= course.shortname %></td>
-        <td><%= course.courseidnumber %></td>
-        <td><%= course.summary %></td>
-        <td><%= course.format %></td>
-        <td><%= course.numberofweekstopics %></td>
-        <td><%= course.start %></td>
-        <td><%= course.hiddensections %></td>
-        <td><%= course.newsitemstoshow %></td>
-        <td><%= course.showgrades %></td>
-        <td><%= course.showactivityreports %></td>
-        <td><%= course.maxuploadsize %></td>
-        <td><%= course.defaultroles %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <% if course.code.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.code %></span></p>
+        <% end %>
+        <% if course.fullname.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.fullname %></span></p>
+        <% end %>
+        <% if course.shortname.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.shortname %></span></p>
+        <% end %>
+        <% if course.courseidnumber.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.courseidnumber %></span></p>
+        <% end %>
+        <% if course.summary.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.summary %></span></p>
+        <% end %>
+        <% if course.format.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.format %></span></p>
+        <% end %>
+        <% if course.numberofweekstopics.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.numberofweekstopics %></span></p>
+        <% end %>
+        <% if course.start.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.start %></span></p>
+        <% end %>
+        <% if course.hiddensections.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.hiddensections %></span></p>
+        <% end %>
+        <% if course.newsitemstoshow.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.newsitemstoshow %></span></p>
+        <% end %>
+        <% if course.showgrades.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.showgrades %></span></p>
+        <% end %>
+        <% if course.showactivityreports.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.showactivityreports %></span></p>
+        <% end %>
+        <% if course.maxuploadsize.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.maxuploadsize %></span></p>
+        <% end %>
+        <% if course.defaultroles.present? %>
+          <p><span class="w3-tag w3-blue"><%= course.defaultroles %></span></p>
+        <% end %>
+          <% end %>
+  </li>
+</ul>
+
 
 <br>
 

@@ -2,6 +2,7 @@
 
 <h1>Listing Bugzillausers</h1>
 
+
 <table>
   <thead>
     <tr>
@@ -28,9 +29,6 @@
         <td><%= bugzillauser.adminpermission %></td>
         <td><%= bugzillauser.creategroupspermission %></td>
         <td><%= bugzillauser.edituserspermission %></td>
-        <td><%= link_to 'Show', bugzillauser %></td>
-        <td><%= link_to 'Edit', edit_bugzillauser_path(bugzillauser) %></td>
-        <td><%= link_to 'Destroy', bugzillauser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

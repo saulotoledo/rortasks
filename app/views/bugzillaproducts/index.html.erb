@@ -2,6 +2,7 @@
 
 <h1>Listing Bugzillaproducts</h1>
 
+
 <table>
   <thead>
     <tr>
@@ -40,9 +41,6 @@
         <td><%= bugzillaproduct.componentdescription %></td>
         <td><%= bugzillaproduct.defaultassignee %></td>
         <td><%= bugzillaproduct.defaultcclist %></td>
-        <td><%= link_to 'Show', bugzillaproduct %></td>
-        <td><%= link_to 'Edit', edit_bugzillaproduct_path(bugzillaproduct) %></td>
-        <td><%= link_to 'Destroy', bugzillaproduct, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
